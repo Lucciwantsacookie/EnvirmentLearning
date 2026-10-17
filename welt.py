@@ -61,23 +61,9 @@ def schritt(welt, figur, aktion):
 
 
 
-eingabe = input("Maximale Schritte pro Episode (Enter = 200): ")
-max_schritte = int(eingabe) if eingabe else 200   # leerer Text zählt als "falsch"
 
-figur = (1, 1)
-gefunden = False
 
-for durchgang in range(1, max_schritte + 1):
 
-    if welt[figur] == FLAGGE:
-        gefunden = True
-        break                                # Episode endet an der Flagge
-
-zeige(welt, figur)
-if gefunden:
-    print("Flagge gefunden nach", durchgang, "Schritten!")
-else:
-    print("Limit von", max_schritte, "Schritten erreicht, keine Flagge.")
 
 
 
